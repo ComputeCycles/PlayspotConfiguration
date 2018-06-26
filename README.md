@@ -1,0 +1,2 @@
+# PlayspotConfiguration
+Playspot Configuration Executable
