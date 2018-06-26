@@ -1,4 +1,6 @@
-#! /bin/sh -v
-hciconfig hci0 down
+#! /bin/bash
+logger -i -t PlayspotConfig Resetting HCI 
+hciconfig hci0 reset
 hciconfig hci0 up
-exec ./PlayspotConfiguration 
+logger -i -t PlayspotConfig Starting Playspot Service 
+exec ./PlayspotConfiguration >& /var/log/playspot
